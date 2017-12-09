@@ -4,7 +4,20 @@
 class InsideShip
 {
   
- 
+ void moveThrottle()
+{
+ fill(30);
+rect(510,350 ,30,70);
+
+fill(90);
+rect(520,370 ,10,55);
+
+fill(255,0,0);
+stroke(0);
+ellipse(525,430,30,30);
+
+
+}
   
   
     void display()
@@ -17,7 +30,7 @@ class InsideShip
   ellipse(340, 230, 200, 80);
   noStroke();
   fill(70);
-beginShape();
+beginShape();// begin draw dashboard
 vertex(0,height);
 vertex(-50,430);
 vertex(100,330);
@@ -32,29 +45,35 @@ vertex(600,330);
 vertex(width + 50,430);
 vertex(width,height);
 // etc;
-endShape();
+endShape();//end draw dashboard
 
 
 
 fill(30);
 stroke(0,255,0);
-beginShape();
+beginShape();//shade at bottom
 vertex(0,530);
 vertex(150,450);
-
-
-
 vertex(550,450);
 vertex(width,530);
-
-// etc;
 endShape();
+
 stroke(0,255,0);
 line (100,330,150,450);
 line (600,330,550,450);
 
 buttons ();
 
+
+fill(30);
+rect(510,350 ,30,70);
+
+fill(90);
+rect(520,340 ,10,55);
+
+fill(255,0,0);
+stroke(0);
+ellipse(525,340,30,30);
 }
 }
 

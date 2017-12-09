@@ -10,11 +10,6 @@ void setup ()
   background (0);
   radar = new Radar(340, height / 2, 50, 0.5, color(255, 255, 255));
   
-  
-  
-  
- 
- 
 }
 
 
@@ -25,4 +20,14 @@ void draw ()
   radar.update();//make radar move
   
    
+}
+
+
+void mousePressed()
+{
+  
+  
+ship1.moveThrottle();
+  
+
 }
