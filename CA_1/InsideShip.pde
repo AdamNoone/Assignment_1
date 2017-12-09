@@ -4,7 +4,20 @@
 class InsideShip
 {
   
+ void moveThrottle()
+{
+ fill(30);
+rect(510,350 ,30,70);
 
+fill(90);
+rect(520,370 ,10,55);
+
+fill(255,0,0);
+stroke(0);
+ellipse(525,430,30,30);
+
+
+}
   float ThrottleX =520;
   float ThrottleY =340;
   float CircleX  = 525;
@@ -66,6 +79,7 @@ stroke(0);
 ellipse(CircleX,CircleY,30,30);
 }
 }
+
 
 void buttons ()
 {

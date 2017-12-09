@@ -17,7 +17,7 @@ class Star {
 
   Star() {
     // I place values in the variables
-    x = random(-width/2, width/2);
+    x = random(-1000, 1000);
     // note: height and width are the same: the canvas is a square.
     y = random(-height/2, height/2);
     // note: the z value can't exceed the width/2 (and height/2) value,

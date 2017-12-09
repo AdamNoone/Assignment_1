@@ -1,4 +1,3 @@
-
 InsideShip ship1 = new InsideShip();
 Radar radar;
 Star[] stars = new Star[500];
@@ -17,7 +16,7 @@ void setup ()
   radar = new Radar(340, height / 2, 50, 0.5, color(255, 255, 255));
   
     for (int i = 0; i < stars.length; i++) {
-    stars[i] = new Star();
+    stars[i] = new Star();;
   }
   
 }
@@ -71,7 +70,28 @@ void mousePressed()
 
 
 }
+
  void keyPressed() {
+    if (key == 'w') {
+   
+     speedX = speedX +10;
+     if (speedX > 100)
+     {
+       speedX = 50;
+     }
+     
+  }
+     if (key == 's') {
+   
+     speedX = speedX -210;
+     if (speedX < 5)
+     {
+       speedX = 5;
+     }
+     
+  }
+    
+     
   if (key == 'a') {
    
      translateX = translateX + 20;
@@ -83,3 +103,4 @@ void mousePressed()
      
   }
  }
+ 
