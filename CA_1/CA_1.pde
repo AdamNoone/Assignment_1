@@ -57,6 +57,9 @@ void mousePressed()
       ship1.ThrottleY +=40;
       ship1.CircleY += 90; 
       speedX = speedX +195;
+      
+      ship1.Color2 = 0;
+      ship1.Color3 = 0;
   }
   
  else if ( i % 2 == 1)
@@ -64,7 +67,12 @@ void mousePressed()
    ship1.ThrottleY -=40;
     ship1.CircleY -= 90; 
     speedX = speedX -195;
+    ship1.Color2 = 120;
+     ship1.Color3 = 120;
  }
+ 
+ 
+      
       }
       
 

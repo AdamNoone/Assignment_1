@@ -22,6 +22,10 @@ ellipse(525,430,30,30);
   float ThrottleY =340;
   float CircleX  = 525;
   float CircleY =  340;
+  float GaugeX = 40;
+  float GaugeY = 375;
+  float Color2 = 102;
+  float Color3 = 102;
   
     void display()
 {
@@ -77,6 +81,31 @@ rect(ThrottleX,ThrottleY ,10,55);
 fill(255,0,0);
 stroke(0);
 ellipse(CircleX,CircleY,30,30);
+
+//make fuel and oxygen gauge 
+
+fill(90);
+rect(GaugeX,GaugeY,25,80);
+rect(GaugeX ,GaugeY + 80,25,15);
+
+fill(255,255,225);
+  textSize(10);
+  text("Fuel",GaugeX +2 ,GaugeY +92);
+
+fill(90);
+rect(GaugeX + 40,GaugeY,25,80);
+rect(GaugeX +40 ,GaugeY + 80,25,15);
+fill(255,255,225);
+  textSize(10);
+  text("O2",GaugeX +42 ,GaugeY +92);
+
+//warning light
+fill(225,Color3,Color3);
+rect(585,GaugeY +15,90,25);
+
+fill(255,255,225);
+  textSize(15);
+  text("Warning",600 ,GaugeY +35);
 }
 }
 
