@@ -4,21 +4,11 @@
 class InsideShip
 {
   
- void moveThrottle()
-{
- fill(30);
-rect(510,350 ,30,70);
 
-fill(90);
-rect(520,370 ,10,55);
-
-fill(255,0,0);
-stroke(0);
-ellipse(525,430,30,30);
-
-
-}
-  
+  float ThrottleX =520;
+  float ThrottleY =340;
+  float CircleX  = 525;
+  float CircleY =  340;
   
     void display()
 {
@@ -69,11 +59,11 @@ fill(30);
 rect(510,350 ,30,70);
 
 fill(90);
-rect(520,340 ,10,55);
+rect(ThrottleX,ThrottleY ,10,55);
 
 fill(255,0,0);
 stroke(0);
-ellipse(525,340,30,30);
+ellipse(CircleX,CircleY,30,30);
 }
 }
 
@@ -81,9 +71,9 @@ void buttons ()
 {
 //if (frameRate % 50 > 20);
 //{
-for (int y = 350 ; y < 420 ; y +=13)
+for (int y = 350 ; y < 410 ; y +=13)
 {
-  for (int x = 160 ; x < 270 ; x +=13)
+  for (int x = 160 ; x < 250 ; x +=13)
 {
   float col = random(0,10);
   if (col < 9)
