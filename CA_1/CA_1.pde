@@ -60,6 +60,9 @@ void mousePressed()
       
       ship1.Color2 = 0;
       ship1.Color3 = 0;
+      ship1.O2Amt = ship1.O2Amt + 15; 
+      ship1.fuelAmt = ship1.fuelAmt + 10;
+      
   }
   
  else if ( i % 2 == 1)
@@ -69,6 +72,8 @@ void mousePressed()
     speedX = speedX -195;
     ship1.Color2 = 120;
      ship1.Color3 = 120;
+     ship1.O2Amt = ship1.O2Amt - 10;
+     ship1.fuelAmt = ship1.fuelAmt - 5;
  }
  
  
@@ -82,10 +87,11 @@ void mousePressed()
  void keyPressed() {
     if (key == 'w') {
    
-     speedX = speedX +10;
+     speedX = speedX +5;
      if (speedX > 100)
      {
-       speedX = 50;
+       speedX = 80;
+       ship1.fuelAmt = ship1.fuelAmt + 1;
      }
      
   }

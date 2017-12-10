@@ -27,6 +27,13 @@ ellipse(525,430,30,30);
   float Color2 = 102;
   float Color3 = 102;
   
+   float fuelX = 41;
+  float fuelY = 454;
+   float fuelX2 = 81;
+  float fuelY2 = 455;
+  float  O2Amt = -50;
+  float  fuelAmt = -50;
+  
     void display()
 {
 
@@ -96,8 +103,17 @@ fill(90);
 rect(GaugeX + 40,GaugeY,25,80);
 rect(GaugeX +40 ,GaugeY + 80,25,15);
 fill(255,255,225);
-  textSize(10);
-  text("O2",GaugeX +42 ,GaugeY +92);
+textSize(10);
+text("O2",GaugeX +42 ,GaugeY +92);
+  
+  
+  //amount in fuel and O2 tanks 
+  fill(244,0,0);
+rect(fuelX,fuelY,23,fuelAmt);
+
+fill(0,0,255);
+rect(fuelX2 ,fuelY2 ,23,O2Amt);
+   
 
 //warning light
 fill(225,Color3,Color3);
