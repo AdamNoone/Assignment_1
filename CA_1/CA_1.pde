@@ -1,6 +1,7 @@
 InsideShip ship1 = new InsideShip();
 Radar radar;
 Star[] stars = new Star[500];
+Planet[] planets = new Planet[5];
 float speed;
 int i = 1;
 float speedX = 5;
@@ -16,7 +17,11 @@ void setup ()
   radar = new Radar(340, height / 2, 50, 0.5, color(255, 255, 255));
   
     for (int i = 0; i < stars.length; i++) {
-    stars[i] = new Star();;
+    stars[i] = new Star();
+    }
+    
+    for (int i = 0; i < planets.length; i++) {
+    planets[i] = new Planet();
   }
   
 }
@@ -31,6 +36,10 @@ void draw ()
   for (int i = 0; i < stars.length; i++) {
     stars[i].update();
     stars[i].show();
+  }
+    for (int i = 0; i < planets.length; i++) {
+    planets[i].update();
+    planets[i].show();
   }
  
   translate(-translateX, -translateY);
