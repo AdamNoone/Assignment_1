@@ -1,29 +1,24 @@
-import camera3D.*;
-import camera3D.generators.*;
-import camera3D.generators.util.*;
 
-import shapes3d.*;
-import shapes3d.animation.*;
-import shapes3d.utils.*;
 
 InsideShip ship1 = new InsideShip();
 Radar radar;
 Star[] stars = new Star[500];
-Planet[] planets = new Planet[5];
+Planet[] planets = new Planet[3];
 float speed;
 int i = 1;
 float speedX = 5;
 float translateX =  350;
 float translateY =  250;
-PImage img1;
+
+PImage space;
 
 
 
 void setup ()
 {
   size (700,500);
-  background (0);
-  img1 = loadImage("earth.jpg");
+  
+  space = loadImage("background.jpg");
   radar = new Radar(340, height / 2, 50, 0.5, color(255, 255, 255));
   
     for (int i = 0; i < stars.length; i++) {
@@ -39,7 +34,7 @@ void setup ()
 
 void draw ()
 {
-  background(0);
+   image(space,0,0);
   
   translate(translateX, translateY);
   speed = map(speedX, 0, width, 0, 50);
