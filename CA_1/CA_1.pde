@@ -19,6 +19,7 @@ float speedX = 5;
 float translateX =  350;
 float translateY =  250;
 
+
 PImage space;
 
 
@@ -38,8 +39,23 @@ void setup ()
     stars[i] = new Star();
     }
     
-    for (int i = 0; i < planets.length; i++) {
-    planets[i] = new Planet(i);
+ loadData();
+  
+}
+
+void loadData()
+{
+  Table table = loadTable("planets.csv", "header"); 
+  
+  
+   for(TableRow row:table.rows())
+  {
+  
+     for (int i = 0; i < planets.length; i++)
+     {
+        planets[i] = new Planet(i);
+     }
+  
   }
   
 }
@@ -178,6 +194,8 @@ void mousePressed()
  
       
       }
+     
+     
      
  }
 

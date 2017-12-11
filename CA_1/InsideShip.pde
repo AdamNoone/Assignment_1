@@ -26,6 +26,8 @@ ellipse(525,430,30,30);
   float GaugeY = 375;
   float Color2 = 102;
   float Color3 = 102;
+  float ScreenX = 280;
+  float ScreenY = 325;
   
    float fuelX = 41;
   float fuelY = 454;
@@ -122,12 +124,44 @@ rect(585,GaugeY +15,90,25);
 fill(255,255,225);
   textSize(15);
   text("Warning",600 ,GaugeY +35);
+  
+  fill (0);
+rect( ScreenX,ScreenY,120,100);
+
+fill(255,255,225);
+textSize(10);
+text("Planet Name :",ScreenX + 5 ,ScreenY + 10);
+
+text("Discovered :",ScreenX + 5 ,ScreenY + 40);
+
+text("Population :",ScreenX + 5 ,ScreenY + 75);
 }
 }
 
 
 void buttons ()
 {
+  
+  for (int y = 360 ; y < 400 ; y +=13)
+{
+  for (int x = 440 ; x < 470 ; x +=13)
+{
+  float col = random(0,10);
+  if (col < 9)
+  {
+    
+  fill (0,255,0);
+   rect (x,y,7,7);
+   
+  }
+  else 
+  {
+   fill (random(0,225),random(0,225),random(0,225));
+  rect (x,y,7,7);
+ }
+//}
+}
+}
 
 for (int y = 360 ; y < 400 ; y +=13)
 {
