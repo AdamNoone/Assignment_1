@@ -70,28 +70,43 @@ vertex(width,height);
 // etc;
 endShape();//end draw dashboard
 
+stroke(0,255,0);
 beginShape();// begin draw top
 vertex(width,0);
 vertex(width,65);
-vertex(600,40);
-vertex(100,40);
+vertex(600,30);
+vertex(100,30);
 vertex(0,65);
 vertex(0,0);
 endShape();//end draw top
-
-beginShape();// begin draw side
+ noStroke();
+beginShape();// begin draw side1
 vertex(width,65);
-vertex(685,60);
-vertex(685,395);
+vertex(695,60);
+vertex(695,395);
 vertex(width,400);
 
-endShape();//end draw side
+endShape();//end draw side1
+
+beginShape();// begin draw side2
+vertex(0,65);
+vertex(5,60);
+vertex(5,395);
+vertex(0,400);
+
+
+
+endShape();//end draw side2
+stroke(70);
+line(100,30,100,330);
+line(600,30,600,330);
 
 
 
 
-fill(30);
 stroke(0,255,0);
+fill(30);
+
 beginShape();//shade at bottom
 vertex(0,530);
 vertex(150,450);
