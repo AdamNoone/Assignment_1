@@ -1,4 +1,8 @@
-
+  
+import processing.sound.*;
+SoundFile file1;
+SoundFile file2;
+SoundFile file3;
 
 InsideShip ship1 = new InsideShip();
 Radar radar;
@@ -6,6 +10,11 @@ Star[] stars = new Star[500];
 Planet[] planets = new Planet[3];
 float speed;
 int i = 1;
+int j = 1;
+int m = 1;
+int a = 0;
+int b = 0;
+
 float speedX = 5;
 float translateX =  350;
 float translateY =  250;
@@ -19,6 +28,10 @@ void setup ()
   size (700,500);
   
   space = loadImage("background.jpg");
+   // Load a soundfile from the /data folder of the sketch and play it back
+  file1 = new SoundFile(this, "BackSpace.mp3");
+  file1.play();
+  
   radar = new Radar(340, height / 2, 50, 0.5, color(255, 255, 255));
   
     for (int i = 0; i < stars.length; i++) {
@@ -94,9 +107,79 @@ void mousePressed()
       
       }
       
-
-
-}
+      
+      
+      //music
+      
+      if (dist(mouseX, mouseY,212, 382) < 25)
+      {
+  j = j +1;
+  
+  if ( j % 2 == 0)
+  {
+  
+       b = b +1;
+     
+     if (a == 1)
+     {
+       file3.stop();
+     }
+   // Load a soundfile from the /data folder of the sketch and play it back
+  file2 = new SoundFile(this, "Music.mp3");
+  
+  
+  file2.play();
+      
+  }
+  
+ else if ( j % 2 == 1)
+ {
+   b = b -1;
+  file2.stop();
+  
+ }
+ 
+ 
+      
+      }
+      
+      
+      
+      //radio
+      println(mouseX, mouseY);
+            if (dist(mouseX, mouseY,157,381) < 25)
+      {
+  m = m +1;
+  
+  if ( m % 2 == 0)
+  {
+  
+     a = a +1;
+     
+     if (b == 1)
+     {
+       file2.stop();
+     }
+   // Load a soundfile from the /data folder of the sketch and play it back
+  file3 = new SoundFile(this, "radio.mp3");
+  
+  
+  file3.play();
+      
+  }
+  
+ else if ( m % 2 == 1)
+ {
+   a = a -1;
+  file3.stop();
+  
+ }
+ 
+ 
+      
+      }
+     
+ }
 
  void keyPressed() {
     if (key == 'w') {

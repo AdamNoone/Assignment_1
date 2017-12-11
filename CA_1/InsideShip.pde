@@ -128,11 +128,10 @@ fill(255,255,225);
 
 void buttons ()
 {
-//if (frameRate % 50 > 20);
-//{
-for (int y = 350 ; y < 410 ; y +=13)
+
+for (int y = 360 ; y < 400 ; y +=13)
 {
-  for (int x = 160 ; x < 250 ; x +=13)
+  for (int x = 140 ; x < 170 ; x +=13)
 {
   float col = random(0,10);
   if (col < 9)
@@ -150,4 +149,28 @@ for (int y = 350 ; y < 410 ; y +=13)
 //}
 }
 }
+
+
+
+for (int y = 360 ; y < 400 ; y +=13)
+{
+  for (int x = 195 ; x < 225 ; x +=13)
+{
+  float col = random(0,10);
+  if (col < 9)
+  {
+    
+  fill (0,255,0);
+   rect (x,y,7,7);
+   
+  }
+  else 
+  {
+   fill (random(0,225),random(0,225),random(0,225));
+  rect (x,y,7,7);
+ }
+//}
+}
+}
+
 }

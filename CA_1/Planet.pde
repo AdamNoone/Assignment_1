@@ -58,7 +58,7 @@ class Planet {
 
   void show() {
     
-    println(col);
+    
     if (col ==1)
       {
         fill(218,165,32);
