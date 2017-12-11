@@ -70,6 +70,24 @@ vertex(width,height);
 // etc;
 endShape();//end draw dashboard
 
+beginShape();// begin draw top
+vertex(width,0);
+vertex(width,65);
+vertex(600,40);
+vertex(100,40);
+vertex(0,65);
+vertex(0,0);
+endShape();//end draw top
+
+beginShape();// begin draw side
+vertex(width,65);
+vertex(685,60);
+vertex(685,395);
+vertex(width,400);
+
+endShape();//end draw side
+
+
 
 
 fill(30);
@@ -129,8 +147,41 @@ text("O2",GaugeX +42 ,GaugeY +92);
   fill(244,0,0);
 rect(fuelX,fuelY,23,fuelAmt);
 
+      if ( O2Amt < -55)
+     {
+     
+       col1 = 0;
+       col2 = 255;
+       col3 = 0;
+     }
+      else if ( (O2Amt > -55) && (O2Amt < -25))
+     {
+     
+       col1 = 0;
+       col2 = 0;
+       col3 = 255;
+     }
+      else if (O2Amt > -25)
+     {
+     
+       col1 = 255;
+       col2 = 0;
+       col3 = 0;
+     }
+     if (O2Amt > -5)
+     {
+       O2Amt = -7;
+     }
+      
+
 fill(col1,col2,col3);
 rect(fuelX2 ,fuelY2 ,23,O2Amt);
+
+ if (fuelAmt > -5)
+     {
+       fuelAmt = -5;
+     }
+   
 fill(255);
 textSize(8);
 text("0-----",numbersX ,numbersY);
