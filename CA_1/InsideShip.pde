@@ -30,6 +30,8 @@ ellipse(525,430,30,30);
   float ScreenX = 280;
   float ScreenY = 325;
   int warncol = 100;
+  float numbersX = 32  ;
+  float numbersY = 455  ;
   
    float fuelX = 41;
   float fuelY = 454;
@@ -102,6 +104,15 @@ rect(GaugeX ,GaugeY + 80,25,15);
 fill(255,255,225);
   textSize(10);
   text("Fuel",GaugeX +2 ,GaugeY +92);
+  textSize(8);
+  
+  
+  
+    
+    
+    
+  
+  
 
 fill(90);
 rect(GaugeX + 40,GaugeY,25,80);
@@ -117,6 +128,8 @@ rect(fuelX,fuelY,23,fuelAmt);
 
 fill(0,0,255);
 rect(fuelX2 ,fuelY2 ,23,O2Amt);
+fill(255);
+text("0-----",numbersX ,numbersY);
    
 
 //warning light

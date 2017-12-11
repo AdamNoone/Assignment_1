@@ -145,6 +145,7 @@ void mousePressed()
      ship1.O2Amt = ship1.O2Amt - 10;
      ship1.fuelAmt = ship1.fuelAmt - 5;
      file6.stop();
+     file5.play();
      file1.play();
  }
  
