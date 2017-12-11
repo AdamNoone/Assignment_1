@@ -14,10 +14,10 @@ class Planet {
   // I create an other variable to store the previous value of the z variable.
   // (the value of the z variable at the previous frame).
   float pz;
-  
-  PShape globe;
- 
  float col;
+ 
+   
+  
   Planet(float colour) {
     // I place values in the variables
     x = random(-900, 900);
@@ -31,8 +31,13 @@ class Planet {
     // which it's like to say that the stars are not moving during the first frame.
     pz = z;
     col = colour;
+    
+     // this refers to the field
+   
    
   }
+  
+
 
   void update() {
     // In the formula to set the new stars coordinates

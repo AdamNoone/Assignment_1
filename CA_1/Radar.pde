@@ -57,6 +57,11 @@ class Radar
     
     fill (20);
     ellipse(cx, cy, radius * 2, radius * 2);
+    ellipse(cx, cy, radius * 1.5, radius * 1.5);
+    ellipse(cx, cy, radius * 1, radius * 1);
+    ellipse(cx, cy, radius * 0.5, radius * 0.5);
+    line(cx,cy - radius,cx,cy + radius);
+    line(cx - radius,cy,cx + radius,cy);
 
     int trailLength = 10;
 

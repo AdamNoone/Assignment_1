@@ -39,6 +39,12 @@ void setup ()
     stars[i] = new Star();
     }
     
+     for (int i = 0; i < planets.length; i++)
+     {
+        planets[i] = new Planet(i);
+     }
+  
+    
  loadData();
   
 }
@@ -47,18 +53,21 @@ void loadData()
 {
   Table table = loadTable("planets.csv", "header"); 
   
-  
-   for(TableRow row:table.rows())
+  // Table.rows() returns all the table rows
+  // We can iterate over all the rows using a for each loop
+  for(TableRow row:table.rows())
   {
-  
-     for (int i = 0; i < planets.length; i++)
-     {
-        planets[i] = new Planet(i);
-     }
-  
+    // Create a new Product object from each of the rows
+    // By passing the TableRow into the Product constructor
+    Species species = new Species(row);
+    // Add the new Star object to the stars ArrayList
+    speciess.add(species);
   }
+
   
 }
+
+ArrayList<Species> speciess = new ArrayList<Species>();
 
 
 void draw ()
@@ -81,7 +90,7 @@ void draw ()
   radar.render();//draw radar
   radar.update();//make radar move
   
-  
+  displaySpecies ();
   
    
 }
@@ -198,6 +207,8 @@ void mousePressed()
      
      
  }
+ 
+ 
 
  void keyPressed() {
     if (key == 'w') {
@@ -232,4 +243,22 @@ void mousePressed()
      
   }
  }
+ 
+ void displaySpecies ()
+{
+   for(Species species:speciess)
+  {
+   float x = species.screenPosX;
+   float y = species.screenPosY;
+   
+  
+   
+   stroke(255, 255, 0);
+   fill(100);
+   
+   ellipse(x,y,4,4);
+  }
+
+}
+  
  

@@ -126,7 +126,10 @@ fill(255,255,225);
   text("Warning",600 ,GaugeY +35);
   
   fill (0);
+  stroke(150);
 rect( ScreenX,ScreenY,120,100);
+
+rect( 290,198,100,101);
 
 fill(255,255,225);
 textSize(10);
