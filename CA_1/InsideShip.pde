@@ -24,6 +24,7 @@ ellipse(525,430,30,30);
   float CircleY =  340;
   float GaugeX = 40;
   float GaugeY = 375;
+  float Color1 = 100;
   float Color2 = 102;
   float Color3 = 102;
   float ScreenX = 280;
@@ -119,7 +120,7 @@ rect(fuelX2 ,fuelY2 ,23,O2Amt);
    
 
 //warning light
-fill(warncol,Color3,Color3);
+fill(Color1,Color3,Color3);
 rect(585,GaugeY +15,90,25);
 
 fill(255,255,225);

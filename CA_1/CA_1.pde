@@ -5,6 +5,7 @@ SoundFile file2;
 SoundFile file3;
 SoundFile file4;
 SoundFile file5;
+SoundFile file6;
 
 InsideShip ship1 = new InsideShip();
 Radar radar;
@@ -116,16 +117,20 @@ void mousePressed()
       ship1.CircleY += 90; 
       speedX = speedX +195;
       
+      ship1.Color1 = 255;
       ship1.Color2 = 0;
       ship1.Color3 = 0;
       ship1.O2Amt = ship1.O2Amt + 15; 
       ship1.fuelAmt = ship1.fuelAmt + 10;
-      ship1.warncol = ship1.warncol +10;
+      
+    
+      
         file5 = new SoundFile(this, "warp.mp3");
+        file6 = new SoundFile(this, "warpmusic.mp3");
   
          file1.stop();
          file5.play();
-         file1.play();
+         file6.play();
       
   }
   
@@ -134,10 +139,13 @@ void mousePressed()
    ship1.ThrottleY -=40;
     ship1.CircleY -= 90; 
     speedX = speedX -195;
+    ship1.Color1 = 100;
     ship1.Color2 = 120;
      ship1.Color3 = 120;
      ship1.O2Amt = ship1.O2Amt - 10;
      ship1.fuelAmt = ship1.fuelAmt - 5;
+     file6.stop();
+     file1.play();
  }
  
  
