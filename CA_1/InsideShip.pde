@@ -131,7 +131,7 @@ rect( ScreenX,ScreenY,120,100);
 
 rect( 290,198,100,101);
 
-fill(255,255,225);
+fill(0,255,0);
 textSize(10);
 text("Planet Name :",ScreenX + 5 ,ScreenY + 10);
 
@@ -209,5 +209,4 @@ for (int y = 360 ; y < 400 ; y +=13)
 //}
 }
 }
-
 }

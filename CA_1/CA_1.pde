@@ -91,6 +91,7 @@ void draw ()
   radar.update();//make radar move
   
   displaySpecies ();
+  displaySpeciesInfo ();
   
    
 }
@@ -251,7 +252,7 @@ void mousePressed()
    float x = species.screenPosX;
    float y = species.screenPosY;
    
-  
+   
    
    stroke(255, 255, 0);
    fill(100);
@@ -260,5 +261,26 @@ void mousePressed()
   }
 
 }
+
+ void displaySpeciesInfo ()
+{
+  fill(255,255,225);
+  textSize(10);
+   for(Species species:speciess)
+  {
+   float x = species.screenPosX;
+   float y = species.screenPosY;
+   
+    if (dist(mouseX, mouseY, x, y) < 5)
+      {
+   
+        text(species.Name, ship1.ScreenX + 5, ship1.ScreenY + 22);
+        text(species.Discovered, ship1.ScreenX + 5, ship1.ScreenY + 52);
+        text(species.Population, ship1.ScreenX + 5, ship1.ScreenY + 87);
+      }
+   
   
- 
+
+}
+  
+}
