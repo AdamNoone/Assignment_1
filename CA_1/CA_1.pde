@@ -143,6 +143,33 @@ void mousePressed()
     ship1.Color2 = 120;
      ship1.Color3 = 120;
      ship1.O2Amt = ship1.O2Amt - 10;
+     
+     if ( ship1.O2Amt > 55)
+     {
+     
+       ship1.col1 = 0;
+       ship1.col2 = 255;
+       ship1.col3 = 0;
+     }
+      else if ( (ship1.O2Amt < 55) && (ship1.O2Amt > 25))
+     {
+     
+       ship1.col1 = 0;
+       ship1.col2 = 0;
+       ship1.col3 = 255;
+     }
+      else if (ship1.O2Amt < 25)
+     {
+     
+       ship1.col1 = 0;
+       ship1.col2 = 0;
+       ship1.col3 = 255;
+     }
+     if (ship1.O2Amt < 5)
+     {
+       ship1.O2Amt = 10;
+     }
+     
      ship1.fuelAmt = ship1.fuelAmt - 5;
      file6.stop();
      file5.play();

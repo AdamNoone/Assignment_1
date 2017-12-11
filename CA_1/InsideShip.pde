@@ -30,14 +30,17 @@ ellipse(525,430,30,30);
   float ScreenX = 280;
   float ScreenY = 325;
   int warncol = 100;
-  float numbersX = 32  ;
-  float numbersY = 455  ;
+  float numbersX = 23  ;
+  float numbersY = 457  ;
+  float col1 = 0;
+  float col2 = 255;
+  float col3 = 0;
   
    float fuelX = 41;
   float fuelY = 454;
    float fuelX2 = 81;
   float fuelY2 = 455;
-  float  O2Amt = -50;
+  float  O2Amt = -80;
   float  fuelAmt = -50;
   
     void display()
@@ -104,7 +107,7 @@ rect(GaugeX ,GaugeY + 80,25,15);
 fill(255,255,225);
   textSize(10);
   text("Fuel",GaugeX +2 ,GaugeY +92);
-  textSize(8);
+  
   
   
   
@@ -126,10 +129,21 @@ text("O2",GaugeX +42 ,GaugeY +92);
   fill(244,0,0);
 rect(fuelX,fuelY,23,fuelAmt);
 
-fill(0,0,255);
+fill(col1,col2,col3);
 rect(fuelX2 ,fuelY2 ,23,O2Amt);
 fill(255);
+textSize(8);
 text("0-----",numbersX ,numbersY);
+
+text("250---",numbersX ,numbersY - 16);
+
+text("500---",numbersX ,numbersY - 32);
+
+text("750---",numbersX ,numbersY-48);
+
+text("1000---",numbersX -5 ,numbersY-64);
+
+
    
 
 //warning light
