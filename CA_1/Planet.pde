@@ -14,8 +14,11 @@ class Planet {
   // I create an other variable to store the previous value of the z variable.
   // (the value of the z variable at the previous frame).
   float pz;
-
-  Planet() {
+  
+  PShape globe;
+ 
+ float col;
+  Planet(float colour) {
     // I place values in the variables
     x = random(-900, 900);
     // note: height and width are the same: the canvas is a square.
@@ -27,6 +30,8 @@ class Planet {
     // I set the previous position of "z" in the same position of "z",
     // which it's like to say that the stars are not moving during the first frame.
     pz = z;
+    col = colour;
+   
   }
 
   void update() {
@@ -52,7 +57,38 @@ class Planet {
   }
 
   void show() {
-    fill(255,0,0);
+    
+    println(col);
+    if (col ==1)
+      {
+        fill(218,165,32);
+      
+      }
+       if (col == 2)
+      {
+        fill(240,230,140);
+      
+      }
+       if (col == 3)
+      {
+        fill(154,255,154);
+      
+      }
+
+    if (col == 4)
+      {
+        fill(128 , 0 , 0);
+      
+      }
+       if (col == 0)
+      {
+        fill(205 , 150,  205);
+      
+      }
+
+    
+    
+    
     noStroke();
 
     // with theese "map", I get the new star positions
@@ -67,6 +103,8 @@ class Planet {
     // I use the z value to increase the star size between a range from 0 to 16.
     float r = map(z, 0, width/2, 200, 0);
     ellipse(sx, sy, r, r);
+    
+  
 
     // Here i use the "pz" valute to get the previous position of the stars,
     // so I can draw a line from the previous position to the new (current) one.
