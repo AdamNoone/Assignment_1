@@ -3,6 +3,8 @@ import processing.sound.*;
 SoundFile file1;
 SoundFile file2;
 SoundFile file3;
+SoundFile file4;
+SoundFile file5;
 
 InsideShip ship1 = new InsideShip();
 Radar radar;
@@ -93,12 +95,15 @@ void draw ()
   displaySpecies ();
   displaySpeciesInfo ();
   
+  
    
 }
 
 
+
 void mousePressed()
 {
+  
   
   if (dist(mouseX, mouseY,ship1.ThrottleX, ship1.ThrottleY) < 50)
       {
@@ -115,6 +120,12 @@ void mousePressed()
       ship1.Color3 = 0;
       ship1.O2Amt = ship1.O2Amt + 15; 
       ship1.fuelAmt = ship1.fuelAmt + 10;
+      ship1.warncol = ship1.warncol +10;
+        file5 = new SoundFile(this, "warp.mp3");
+  
+         file1.stop();
+         file5.play();
+         file1.play();
       
   }
   
@@ -204,8 +215,27 @@ void mousePressed()
  
       
       }
+      
+      
+      
      
-     
+       
+            if (dist(mouseX, mouseY,455,384) < 25)
+      {
+
+   // Load a soundfile from the /data folder of the sketch and play it back
+  file4 = new SoundFile(this, "transmission.mp3");
+  
+  
+  file4.play();
+      
+  }
+  
+
+ 
+ 
+      
+      
      
  }
  
@@ -251,13 +281,19 @@ void mousePressed()
   {
    float x = species.screenPosX;
    float y = species.screenPosY;
-   
+    
+    species.screenPosY = species.screenPosY + 0.01;
    
    
    stroke(255, 255, 0);
    fill(100);
    
    ellipse(x,y,4,4);
+   
+   if (species.screenPosY > 297)
+   {
+     species.screenPosY = 204;
+   }
   }
 
 }
