@@ -330,12 +330,16 @@ void mousePressed()
   {
   
     thirdPerson = thirdPerson +1;
+    file7 = new SoundFile(this, "button.mp3");
+    file7.play();
       
   }
   
  else if ( w % 2 == 1)
  {
   thirdPerson = thirdPerson -1;
+  
+    file7.play();
  }
    
   }
