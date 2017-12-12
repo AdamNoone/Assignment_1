@@ -435,7 +435,7 @@ void mousePressed()
      
   }
    
-    if (key == 'w') { //if w was pressed
+    if (key == 'w') { //if w was pressed move the ship forward (accelerate)
    
      speedX = speedX +5;
      if (speedX > 100)
@@ -447,7 +447,7 @@ void mousePressed()
        ship1.O2Amt = ship1.O2Amt + 0.1;
      
   }
-     if (key == 's') { //if s was pressed
+     if (key == 's') { //if s was pressed move the ship forward (decelerate)
    
      speedX = speedX -10;
      if (speedX < 5)
@@ -458,7 +458,7 @@ void mousePressed()
   }
     
      
-  if (key == 'a') { //if a was pressed
+  if (key == 'a') { //if a was pressed move the ship left
    
      translateX = translateX + 20;
      
@@ -472,30 +472,30 @@ void mousePressed()
  
 
  
- void displaySpecies ()
+ void displaySpecies ()//function to show planets on radar 
 {
-   for(Species species:speciess)
+   for(Species species:speciess)//for each planet
   {
-   float x = species.screenPosX;
-   float y = species.screenPosY;
+   float x = species.screenPosX; //set x co-ordinate
+   float y = species.screenPosY; //set y co-ordinate
     
-    species.screenPosY = species.screenPosY + 0.01;
+    species.screenPosY = species.screenPosY + 0.01; //used to make planets on radar move as ship moves 
    
    
    stroke(255, 255, 0);
    fill(100);
    
-   ellipse(x,y,4,4);
+   ellipse(x,y,4,4);//draw plnet on radar
    
-   if (species.screenPosY > 297)
+   if (species.screenPosY > 297)//if the plnet goes off radar 
    {
-     species.screenPosY = 204;
+     species.screenPosY = 204;//make new planet at top
    }
   }
 
 }
 
- void displaySpeciesInfo ()
+ void displaySpeciesInfo ()//fuction to display a planets info on screen 
 {
   fill(255,255,225);
   textSize(10);
@@ -504,12 +504,12 @@ void mousePressed()
    float x = species.screenPosX;
    float y = species.screenPosY;
    
-    if (dist(mouseX, mouseY, x, y) < 5)
+    if (dist(mouseX, mouseY, x, y) < 5) //if mouse is hovering on a planet on the radar 
       {
    
-        text(species.Name, ship1.ScreenX + 5, ship1.ScreenY + 22);
-        text(species.Discovered, ship1.ScreenX + 5, ship1.ScreenY + 52);
-        text(species.Population, ship1.ScreenX + 5, ship1.ScreenY + 87);
+        text(species.Name, ship1.ScreenX + 5, ship1.ScreenY + 22);//print name of planet 
+        text(species.Discovered, ship1.ScreenX + 5, ship1.ScreenY + 52);//print when it was discovred
+        text(species.Population, ship1.ScreenX + 5, ship1.ScreenY + 87);//print population of planet
       }
    
   
@@ -518,13 +518,13 @@ void mousePressed()
   
 }
 
- void RadarWarp ()
+ void RadarWarp ()//fuction to make planets on radar move during warp
 {
   fill(255,255,225);
   
    for(Species species:speciess)
   {
-   float x = species.screenPosX;
+   
       
   species.screenPosY= species.screenPosY +20;
   
