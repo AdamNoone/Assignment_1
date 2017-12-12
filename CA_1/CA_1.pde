@@ -64,6 +64,8 @@ void setup ()
   
 }
 
+
+
 void loadData() // function to load data  from CSV file
 {
   Table table = loadTable("planets.csv", "header"); 
@@ -116,21 +118,24 @@ void draw ()
   
   }
   
+  
+  
   if ((invisible ==1) && (thirdPerson ==0))//if invisable button has been pressed and not in 3rd person mode
   {
     background(0);
        image(space,0,0);
        
   
-  translate(translateX, translateY);//translate so stars are in centre of screen
-  speed = map(speedX, 0, width, 0, 50);//set ships speed
-  for (int i = 0; i < stars.length; i++) {//draw all the stars
-    stars[i].update();//updates stars postion
-    stars[i].show();//draw star in new positon
+      translate(translateX, translateY);//translate so stars are in centre of screen
+      speed = map(speedX, 0, width, 0, 50);//set ships speed
+      
+      for (int i = 0; i < stars.length; i++) {//draw all the stars
+        stars[i].update();//updates stars postion
+        stars[i].show();//draw star in new positon
   }
-    for (int i = 0; i < planets.length; i++) {//draw all the planets
-    planets[i].update();//updates planet postion
-    planets[i].show();//draw planet in new positon
+      for (int i = 0; i < planets.length; i++) {//draw all the planets
+      planets[i].update();//updates planet postion
+      planets[i].show();//draw planet in new positon
   }
      
   }
@@ -143,13 +148,14 @@ void draw ()
   
   translate(translateX, translateY);//translate so stars are in centre of screen
   speed = map(speedX, 0, width, 0, 50);//set ships speed
-  for (int i = 0; i < stars.length; i++) {//draw all the stars
-    stars[i].update();//updates stars postion
-    stars[i].show();//draw star in new positon
+  
+    for (int i = 0; i < stars.length; i++) {//draw all the stars
+      stars[i].update();//updates stars postion
+      stars[i].show();//draw star in new positon
   }
-    for (int i = 0; i < planets.length; i++) {//draw all the planets
-    planets[i].update();//updates planet postion
-    planets[i].show();//draw planet in new positon
+      for (int i = 0; i < planets.length; i++) {//draw all the planets
+      planets[i].update();//updates planet postion
+      planets[i].show();//draw planet in new positon
   }
      ship2.DrawExterior();//draw the outside of the ship
   }
@@ -160,19 +166,19 @@ void draw ()
   {
       background(0);
        image(space,0,0);
-  
-  //SAME AS ABOVE
-  translate(translateX, translateY);
-  speed = map(speedX, 0, width, 0, 50);
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
-  }
-    for (int i = 0; i < planets.length; i++) {
-    planets[i].update();
-    planets[i].show();
-  }
-  }
+        
+        //SAME AS ABOVE
+        translate(translateX, translateY);
+        speed = map(speedX, 0, width, 0, 50);
+        for (int i = 0; i < stars.length; i++) {
+          stars[i].update();
+          stars[i].show();
+        }
+          for (int i = 0; i < planets.length; i++) {
+          planets[i].update();
+          planets[i].show();
+        }
+        }
 }
 
 
@@ -495,6 +501,8 @@ void mousePressed()
 
 }
 
+
+
  void displaySpeciesInfo ()//fuction to display a planets info on screen 
 {
   fill(255,255,225);
@@ -517,6 +525,8 @@ void mousePressed()
 }
   
 }
+
+
 
  void RadarWarp ()//fuction to make planets on radar move during warp
 {
