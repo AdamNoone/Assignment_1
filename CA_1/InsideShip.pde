@@ -223,10 +223,11 @@ text("1000---",numbersX -5 ,numbersY-64);
 
 
 //Go invivsable button 
-fill(255);
+stroke(255,0,0);
+fill(70);
 rect(InvisButX,InvisButY ,90,15);
 
-fill(0);
+  fill(255);
   textSize(10);
   text("Invisable Cloak",InvisButX +8 ,InvisButY + 11);
   

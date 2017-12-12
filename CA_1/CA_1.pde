@@ -270,7 +270,7 @@ void mousePressed()
   
 
  
-             if (dist(mouseX, mouseY,1,1) < 25)
+             if (dist(mouseX, mouseY,270,10) < 28)
       {
 
            
