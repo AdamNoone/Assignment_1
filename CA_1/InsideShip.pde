@@ -282,15 +282,16 @@ text("Population :",ScreenX + 5 ,ScreenY + 75);
 }
 
 
-void buttons ()
+void buttons ()//fuction to draw green buttons on dashboard
 {
   
-  for (int y = 360 ; y < 400 ; y +=13)
+  for (int y = 360 ; y < 400 ; y +=13)//use loop to draw each button in new Y Position
 {
-  for (int x = 440 ; x < 470 ; x +=13)
+  for (int x = 440 ; x < 470 ; x +=13) //use loop to draw each button in new X Position
 {
+  //In the following lines all im doing is changing the button colors to ive them a nice effect when skech is running
   float col = random(0,10);
-  if (col < 9)
+  if (col < 8)
   {
     
   fill (0,255,0);
@@ -306,11 +307,11 @@ void buttons ()
 }
 }
 
-for (int y = 360 ; y < 400 ; y +=13)
+for (int y = 360 ; y < 400 ; y +=13)//use loop to draw each button in new Y Position
 {
-  for (int x = 140 ; x < 170 ; x +=13)
+  for (int x = 140 ; x < 170 ; x +=13)//use loop to draw each button in new X Position
 {
-  float col = random(0,10);
+  float col = random(0,10);//In the following lines all im doing is changing the button colors to ive them a nice effect when skech is running
   if (col < 9)
   {
     
@@ -329,11 +330,11 @@ for (int y = 360 ; y < 400 ; y +=13)
 
 
 
-for (int y = 360 ; y < 400 ; y +=13)
+for (int y = 360 ; y < 400 ; y +=13)//use loop to draw each button in new Y Position
 {
-  for (int x = 195 ; x < 225 ; x +=13)
+  for (int x = 195 ; x < 225 ; x +=13)//use loop to draw each button in new X Position
 {
-  float col = random(0,10);
+  float col = random(0,10);//In the following lines all im doing is changing the button colors to ive them a nice effect when skech is running
   if (col < 9)
   {
     
