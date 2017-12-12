@@ -214,7 +214,7 @@ void mousePressed()
     ship1.Color3 = 120;
      radar.speed = radar.speed /7;
      radar.c = radar.c +200;
-     RadarWarp ();
+     RadarWarp (); 
     
      
      
@@ -428,9 +428,10 @@ void mousePressed()
      if (speedX > 100)
      {
        speedX = 80;
-       ship1.fuelAmt = ship1.fuelAmt + 0.5;
-       ship1.O2Amt = ship1.O2Amt + 0.5;
+       
      }
+     ship1.fuelAmt = ship1.fuelAmt + 0.1;
+       ship1.O2Amt = ship1.O2Amt + 0.1;
      
   }
      if (key == 's') {
