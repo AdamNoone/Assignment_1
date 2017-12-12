@@ -50,3 +50,5 @@ im using it to diplay informtion to the user.I also enjoyed learning about new p
 Another aspect im very proud about is the Invisable Cloak and 3rd Person modes.Im happy with these buttons/modes because they allow the user to completely change the 
 the look of the sketch.In also enables me to show off what ive created.In Invisable mode the user gets to see the stars and planets ive created.While in 3rd person mode 
 they can see the ship ive creted.
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/https://youtu.be/vecMCz1eB1s/0.jpg)](http://www.youtube.com/watch?v=https://youtu.be/vecMCz1eB1s)
