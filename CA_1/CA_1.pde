@@ -177,10 +177,10 @@ void mousePressed()
   
   if ( i % 2 == 0)
   {
-  
+      
       ship1.ThrottleY +=40;
       ship1.CircleY += 90; 
-      speedX = speedX +195;
+      speedX = speedX +600;
       
       ship1.Color1 = 255;
       ship1.Color2 = 0;
@@ -204,7 +204,7 @@ void mousePressed()
  {
    ship1.ThrottleY -=40;
     ship1.CircleY -= 90; 
-    speedX = speedX -195;
+    speedX = speedX -600;
     ship1.Color1 = 100;
     ship1.Color2 = 120;
     ship1.Color3 = 120;
@@ -420,8 +420,8 @@ void mousePressed()
      if (speedX > 100)
      {
        speedX = 80;
-       ship1.fuelAmt = ship1.fuelAmt + 1;
-       ship1.O2Amt = ship1.O2Amt + 1;
+       ship1.fuelAmt = ship1.fuelAmt + 0.5;
+       ship1.O2Amt = ship1.O2Amt + 0.5;
      }
      
   }
