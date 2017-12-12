@@ -1,0 +1,11 @@
+class OutsideShip
+{
+  
+ void DrawExterior()
+{
+
+
+
+}
+  
+} 
