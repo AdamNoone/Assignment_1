@@ -187,6 +187,11 @@ rect(fuelX,fuelY,23,fuelAmt);
      {
        O2Amt = -7;
      }
+     
+      if (O2Amt < -79)
+     {
+       O2Amt = -79;
+     }
       
 
 fill(col1,col2,col3);
@@ -195,6 +200,11 @@ rect(fuelX2 ,fuelY2 ,23,O2Amt);
  if (fuelAmt > -5)
      {
        fuelAmt = -5;
+     }
+     
+      if (fuelAmt < -77)
+     {
+       fuelAmt = -77;
      }
    
 fill(255);

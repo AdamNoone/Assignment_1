@@ -96,6 +96,9 @@ void draw ()
   displaySpecies ();
   displaySpeciesInfo ();
   
+  ship1.fuelAmt -=0.009;
+  ship1.O2Amt -=0.009;
+  
   
    
 }
@@ -120,8 +123,8 @@ void mousePressed()
       ship1.Color1 = 255;
       ship1.Color2 = 0;
       ship1.Color3 = 0;
-      ship1.O2Amt = ship1.O2Amt + 15; 
-      ship1.fuelAmt = ship1.fuelAmt + 5;
+      ship1.O2Amt = ship1.O2Amt + 80; 
+      ship1.fuelAmt = ship1.fuelAmt + 80;
       
  
     
@@ -142,7 +145,7 @@ void mousePressed()
     speedX = speedX -195;
     ship1.Color1 = 100;
     ship1.Color2 = 120;
-     ship1.Color3 = 120;
+    ship1.Color3 = 120;
      
      
      
@@ -267,7 +270,7 @@ void mousePressed()
   }
      if (key == 's') {
    
-     speedX = speedX -210;
+     speedX = speedX -10;
      if (speedX < 5)
      {
        speedX = 5;
@@ -283,7 +286,7 @@ void mousePressed()
   }
   if (key == 'd') {
    
-     translateX = translateX -  20;
+       translateX = translateX -  20;
      
   }
  }
