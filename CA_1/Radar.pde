@@ -15,7 +15,7 @@ class Radar
 
   {
     
-    //gets the values passed from draw () ,put them in each local var
+    //gets the values passed from draw () ,put them in each local vars
     this.cx = cx;
     this.cy = cy;
     this.radius = radius;
