@@ -35,7 +35,7 @@ ellipse(525,430,30,30);
   float col1 = 0;
   float col2 = 255;
   float col3 = 0;
-  float InvisButX = 233;
+  float InvisButX = 203;
   float InvisButY = 9;
   
    float fuelX = 41;
@@ -230,6 +230,15 @@ rect(InvisButX,InvisButY ,90,15);
   fill(255);
   textSize(10);
   text("Invisable Cloak",InvisButX +8 ,InvisButY + 11);
+  
+  
+  //3rd person Button 
+  fill(70);
+  rect(InvisButX+170,InvisButY ,90,15);
+
+  fill(255);
+  textSize(10);
+  text("3rd Person",InvisButX +188 ,InvisButY + 11);
   
   fill (0);
   stroke(150);

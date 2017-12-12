@@ -8,6 +8,7 @@ SoundFile file5;
 SoundFile file6;
 
 InsideShip ship1 = new InsideShip();
+OutsideShip ship2 = new OutsideShip();
 Radar radar;
 Star[] stars = new Star[500];
 Planet[] planets = new Planet[3];
@@ -18,7 +19,9 @@ int m = 1;
 int a = 0;
 int b = 0;
 int f = 1;
+int w = 1;
 int invisible =0;
+int thirdPerson = 0;
 
 float speedX = 5;
 float translateX =  350;
@@ -121,7 +124,26 @@ void draw ()
     planets[i].update();
     planets[i].show();
   }
- 
+     
+  }
+  
+  
+   if (thirdPerson ==1)
+  {
+    background(0);
+       image(space,0,0);
+  
+  translate(translateX, translateY);
+  speed = map(speedX, 0, width, 0, 50);
+  for (int i = 0; i < stars.length; i++) {
+    stars[i].update();
+    stars[i].show();
+  }
+    for (int i = 0; i < planets.length; i++) {
+    planets[i].update();
+    planets[i].show();
+  }
+     ship2.DrawExterior();
   }
 }
 
@@ -292,7 +314,28 @@ void mousePressed()
    
   }
   
+                  if (dist(mouseX, mouseY,440,10) < 28)
+      {
+
+           
+         
+     w += 1;
       
+  
+  if ( w % 2 == 0)
+  {
+  
+    thirdPerson = thirdPerson +1;
+      
+  }
+  
+ else if ( w % 2 == 1)
+ {
+  thirdPerson = thirdPerson -1;
+ }
+   
+  }
+   
       
      
  }
