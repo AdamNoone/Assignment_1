@@ -1,5 +1,7 @@
-  
+//import librarys
 import processing.sound.*;
+
+//declare sound files
 SoundFile file1;
 SoundFile file2;
 SoundFile file3;
@@ -8,12 +10,14 @@ SoundFile file5;
 SoundFile file6;
 SoundFile file7;
 
-InsideShip ship1 = new InsideShip();
-OutsideShip ship2 = new OutsideShip();
+//declare class objects
+InsideShip ship1 = new InsideShip();//InsideShip Object
+OutsideShip ship2 = new OutsideShip(); //OutsideShip Object
 Radar radar;
-Star[] stars = new Star[500];
-Planet[] planets = new Planet[3];
-float speed;
+Star[] stars = new Star[500];// array of 500 star objects
+Planet[] planets = new Planet[3];// aray of 3 planet objects
+float speed;//used to determine spped of ship
+//ALL COUNTERS USED 
 int i = 1;
 int j = 1;
 int m = 1;
@@ -21,15 +25,17 @@ int a = 0;
 int b = 0;
 int f = 1;
 int w = 1;
-int invisible =0;
-int thirdPerson = 0;
-
-float speedX = 15;
-float translateX =  350;
-float translateY =  250;
 
 
-PImage space;
+int invisible =0;//used to see in "i" key or Invissable cloak button has been pressed
+int thirdPerson = 0; //used to see in "t" key or third person button has been pressed
+
+float speedX = 15;//used to change speed of ship
+float translateX =  350;//tranlate whole sketch on x axis
+float translateY =  250;//tranlate whole sketch on Y axis
+
+
+PImage space;//background Image 
 
 
 
@@ -37,28 +43,28 @@ void setup ()
 {
   size (700,500);
   
-  space = loadImage("background.jpg");
+  space = loadImage("background.jpg");//set back image 
    // Load a soundfile from the /data folder of the sketch and play it back
-  file1 = new SoundFile(this, "BackSpace.mp3");
-  file1.play();
+  file1 = new SoundFile(this, "BackSpace.mp3");// set backround music
+  file1.play();//play backround music
   
-  radar = new Radar(340, height / 2, 50, 0.5, color(255, 255, 255));
+  radar = new Radar(340, height / 2, 50, 0.5, color(255, 255, 255));//call radar constructor
   
     for (int i = 0; i < stars.length; i++) {
-    stars[i] = new Star();
+    stars[i] = new Star();//makes 500 stars 
     }
     
      for (int i = 0; i < planets.length; i++)
      {
-        planets[i] = new Planet(i);
+        planets[i] = new Planet(i);//makes 3 stars
      }
   
     
- loadData();
+ loadData();//call  function to load data  from CSV file 
   
 }
 
-void loadData()
+void loadData() // function to load data  from CSV file
 {
   Table table = loadTable("planets.csv", "header"); 
   
@@ -66,93 +72,96 @@ void loadData()
   // We can iterate over all the rows using a for each loop
   for(TableRow row:table.rows())
   {
-    // Create a new Product object from each of the rows
-    // By passing the TableRow into the Product constructor
+    // Create a new Species object from each of the rows
+    // By passing the TableRow into the Species constructor
     Species species = new Species(row);
-    // Add the new Star object to the stars ArrayList
+    // Add the new Species object to the stars ArrayList
     speciess.add(species);
   }
 
   
 }
 
-ArrayList<Species> speciess = new ArrayList<Species>();
+ArrayList<Species> speciess = new ArrayList<Species>();//define an array List called Species
 
 
 void draw ()
 {
-  if (invisible ==0)
+  if (invisible ==0)//if invisable button has not been pressed
   {
    image(space,0,0);
   
-  translate(translateX, translateY);
-  speed = map(speedX, 0, width, 0, 50);
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
+  translate(translateX, translateY);//translate so stars are in centre of screen 
+  speed = map(speedX, 0, width, 0, 50); //set ships speed 
+  for (int i = 0; i < stars.length; i++) {//draw all the stars
+    stars[i].update();//updates stars postion
+    stars[i].show();//draw star in new positon
   }
-    for (int i = 0; i < planets.length; i++) {
-    planets[i].update();
-    planets[i].show();
+    for (int i = 0; i < planets.length; i++) {//draw all the planet
+    planets[i].update();//updates planet postion
+    planets[i].show();//draw planet in new positon
   }
  
-  translate(-translateX, -translateY);
+  translate(-translateX, -translateY);//untraslate
   ship1.display();//draw inside of ship
   radar.render();//draw radar
   radar.update();//make radar move
   
-  displaySpecies ();
-  displaySpeciesInfo ();
+  displaySpecies ();//draw planets on radar 
+  displaySpeciesInfo ();//get info for each planet 
   
-  ship1.fuelAmt -=0.009;
-  ship1.O2Amt -=0.009;
+  ship1.fuelAmt -=0.009;//fuel fills slowly
+  ship1.O2Amt -=0.009;//O2 fills slowly
   
   
   }
   
-  if ((invisible ==1) && (thirdPerson ==0))
+  if ((invisible ==1) && (thirdPerson ==0))//if invisable button has been pressed and not in 3rd person mode
   {
     background(0);
        image(space,0,0);
        
   
-  translate(translateX, translateY);
-  speed = map(speedX, 0, width, 0, 50);
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
+  translate(translateX, translateY);//translate so stars are in centre of screen
+  speed = map(speedX, 0, width, 0, 50);//set ships speed
+  for (int i = 0; i < stars.length; i++) {//draw all the stars
+    stars[i].update();//updates stars postion
+    stars[i].show();//draw star in new positon
   }
-    for (int i = 0; i < planets.length; i++) {
-    planets[i].update();
-    planets[i].show();
+    for (int i = 0; i < planets.length; i++) {//draw all the planets
+    planets[i].update();//updates planet postion
+    planets[i].show();//draw planet in new positon
   }
      
   }
   
   
-   if ((invisible ==0) && (thirdPerson ==1))
+   if ((invisible ==0) && (thirdPerson ==1)) //if invisable button has not been pressed and  in 3rd person mode
   {
     background(0);
        image(space,0,0);
   
-  translate(translateX, translateY);
-  speed = map(speedX, 0, width, 0, 50);
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
+  translate(translateX, translateY);//translate so stars are in centre of screen
+  speed = map(speedX, 0, width, 0, 50);//set ships speed
+  for (int i = 0; i < stars.length; i++) {//draw all the stars
+    stars[i].update();//updates stars postion
+    stars[i].show();//draw star in new positon
   }
-    for (int i = 0; i < planets.length; i++) {
-    planets[i].update();
-    planets[i].show();
+    for (int i = 0; i < planets.length; i++) {//draw all the planets
+    planets[i].update();//updates planet postion
+    planets[i].show();//draw planet in new positon
   }
-     ship2.DrawExterior();
+     ship2.DrawExterior();//draw the outside of the ship
   }
   
-  if ((invisible ==1) && (thirdPerson ==1))
+  
+  
+  if ((invisible ==1) && (thirdPerson ==1))//if invisable button has been pressed and  in 3rd person mode
   {
       background(0);
        image(space,0,0);
   
+  //SAME AS ABOVE
   translate(translateX, translateY);
   speed = map(speedX, 0, width, 0, 50);
   for (int i = 0; i < stars.length; i++) {
@@ -172,25 +181,25 @@ void mousePressed()
 {
   
   
-  if (dist(mouseX, mouseY,ship1.ThrottleX, ship1.ThrottleY) < 50)
+  if (dist(mouseX, mouseY,ship1.ThrottleX, ship1.ThrottleY) < 50) //if throttle has been presses
       {
-  i = i +1;
+  i = i +1;//used to see how may time its been pressed 
   
-  if ( i % 2 == 0)
+  if ( i % 2 == 0)//put throttle down
   {
       
-      ship1.ThrottleY +=40;
-      ship1.CircleY += 90; 
-      speedX = speedX +600;
+      ship1.ThrottleY +=40;//move throttle
+      ship1.CircleY += 90; //move throttle
+      speedX = speedX +600;//increase ship speed
       
-      ship1.Color1 = 255;
-      ship1.Color2 = 0;
-      ship1.Color3 = 0;
-      ship1.O2Amt = ship1.O2Amt + 80; 
-      ship1.fuelAmt = ship1.fuelAmt + 80;
-      radar.speed = radar.speed *7;
-      radar.c = radar.c -200;
-      RadarWarp ();
+      ship1.Color1 = 255;//change warning light colour
+      ship1.Color2 = 0;//change warning light colour
+      ship1.Color3 = 0;//change warning light colour
+      ship1.O2Amt = ship1.O2Amt + 80; //change amt of O2
+      ship1.fuelAmt = ship1.fuelAmt + 80;//change amt of fuel
+      radar.speed = radar.speed *7;//change radar speed
+      radar.c = radar.c -200;//change radar color
+      RadarWarp ();//call radr warp func
       
  
     
@@ -198,15 +207,17 @@ void mousePressed()
         file5 = new SoundFile(this, "warp.mp3");
         file6 = new SoundFile(this, "warpmusic.mp3");
   
-         file1.stop();
-         file5.play();
-         file6.play();
+         file1.stop();//stop back music
+         file5.play();//play warp sound
+         file6.play();//play warp sound
       
   }
   
- else if ( i % 2 == 1)
+ else if ( i % 2 == 1)//pull throttle up
  {
-   ship1.ThrottleY -=40;
+   //set all values back to were before warp
+   
+    ship1.ThrottleY -=40;
     ship1.CircleY -= 90; 
     speedX = speedX -600;
     ship1.Color1 = 100;
@@ -231,7 +242,7 @@ void mousePressed()
       
       
       
-      //music
+      //buttonnoises
       
       if (dist(mouseX, mouseY,212, 382) < 25)
       {
