@@ -51,5 +51,4 @@ Another aspect im very proud about is the Invisable Cloak and 3rd Person modes.I
 the look of the sketch.In also enables me to show off what ive created.In Invisable mode the user gets to see the stars and planets ive created.While in 3rd person mode 
 they can see the ship ive creted.
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/vecMCz1eB1s&feature=youtu.be/0.jpg)](http://www.youtube.com/watch?v=vecMCz1eB1s&feature=youtu.be)
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/https://youtu.be/vecMCz1eB1s/0.jpg)](http://www.youtube.com/watch?v=https://youtu.be/vecMCz1eB1s)
+[![MY YOUTUBE VIDEO](http://img.youtube.com/vi/vecMCz1eB1s&feature=youtu.be/0.jpg)](http://www.youtube.com/watch?v=vecMCz1eB1s&feature=youtu.be)
