@@ -40,7 +40,7 @@ class Star {
     noStroke();
 
    // use map to get the new Star positions at each frame
-    // using map means are sure the new coordinates "sx" and "sy" move are bogger at each frame (making star move faster
+    // using map means are sure the new coordinates "sx" and "sy" move are bogger at each frame(making star move faster
     
     float sx = map(x / z, 0, 1, 0, width/2);//map star positions to a range of 0 - 1 (inside a range of 0 - width/2.)
     float sy = map(y / z, 0, 1, 0, height/2);//map star positions to a range of 0 - 1 (inside a range of 0 - height/2.)
