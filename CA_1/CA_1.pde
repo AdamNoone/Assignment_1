@@ -6,6 +6,7 @@ SoundFile file3;
 SoundFile file4;
 SoundFile file5;
 SoundFile file6;
+SoundFile file7;
 
 InsideShip ship1 = new InsideShip();
 OutsideShip ship2 = new OutsideShip();
@@ -279,7 +280,7 @@ void mousePressed()
       
      
        
-            if (dist(mouseX, mouseY,455,384) < 25)
+            if (dist(mouseX, mouseY,475,384) < 25)
       {
 
    // Load a soundfile from the /data folder of the sketch and play it back
@@ -292,7 +293,7 @@ void mousePressed()
   
 
  
-             if (dist(mouseX, mouseY,270,10) < 28)
+             if (dist(mouseX, mouseY,243,10) < 28)
       {
 
            
@@ -304,17 +305,20 @@ void mousePressed()
   {
   
     invisible = invisible +1;
+    file7 = new SoundFile(this, "button.mp3");
+    file7.play();
       
   }
   
  else if ( f % 2 == 1)
  {
   invisible = invisible -1;
+  file7.play();
  }
    
   }
   
-                  if (dist(mouseX, mouseY,440,10) < 28)
+                  if (dist(mouseX, mouseY,430,10) < 28)
       {
 
            
@@ -343,7 +347,26 @@ void mousePressed()
  
 
  void keyPressed() {
+     if (key == 'i') {
    
+     f += 1;
+     
+      if ( f % 2 == 0)
+  {
+  
+    invisible = invisible +1;
+    file7 = new SoundFile(this, "button.mp3");
+    file7.play();
+      
+  }
+  
+ else if ( f % 2 == 1)
+ {
+  invisible = invisible -1;
+  file7.play();
+ }
+     
+  }
    
     if (key == 'w') {
    
