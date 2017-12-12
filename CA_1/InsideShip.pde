@@ -35,6 +35,8 @@ ellipse(525,430,30,30);
   float col1 = 0;
   float col2 = 255;
   float col3 = 0;
+  float InvisButX = 233;
+  float InvisButY = 9;
   
    float fuelX = 41;
   float fuelY = 454;
@@ -220,6 +222,17 @@ text("750---",numbersX ,numbersY-48);
 text("1000---",numbersX -5 ,numbersY-64);
 
 
+//Go invivsable button 
+fill(255);
+rect(InvisButX,InvisButY ,90,15);
+
+fill(0);
+  textSize(10);
+  text("Invisable Cloak",InvisButX +8 ,InvisButY + 11);
+  
+  fill (0);
+  stroke(150);
+rect( ScreenX,ScreenY,120,100);
    
 
 //warning light

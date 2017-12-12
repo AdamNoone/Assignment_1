@@ -17,6 +17,8 @@ int j = 1;
 int m = 1;
 int a = 0;
 int b = 0;
+int f = 1;
+int invisible =0;
 
 float speedX = 5;
 float translateX =  350;
@@ -75,6 +77,8 @@ ArrayList<Species> speciess = new ArrayList<Species>();
 
 void draw ()
 {
+  if (invisible ==0)
+  {
    image(space,0,0);
   
   translate(translateX, translateY);
@@ -100,7 +104,25 @@ void draw ()
   ship1.O2Amt -=0.009;
   
   
-   
+  }
+  
+  if (invisible ==1)
+  {
+    background(0);
+       image(space,0,0);
+  
+  translate(translateX, translateY);
+  speed = map(speedX, 0, width, 0, 50);
+  for (int i = 0; i < stars.length; i++) {
+    stars[i].update();
+    stars[i].show();
+  }
+    for (int i = 0; i < planets.length; i++) {
+    planets[i].update();
+    planets[i].show();
+  }
+ 
+  }
 }
 
 
@@ -248,7 +270,28 @@ void mousePressed()
   
 
  
- 
+             if (dist(mouseX, mouseY,1,1) < 25)
+      {
+
+           
+         
+     f += 1;
+      
+  
+  if ( f % 2 == 0)
+  {
+  
+    invisible = invisible +1;
+      
+  }
+  
+ else if ( f % 2 == 1)
+ {
+  invisible = invisible -1;
+ }
+   
+  }
+  
       
       
      
@@ -257,6 +300,8 @@ void mousePressed()
  
 
  void keyPressed() {
+   
+   
     if (key == 'w') {
    
      speedX = speedX +5;
@@ -290,6 +335,8 @@ void mousePressed()
      
   }
  }
+ 
+  
  
  void displaySpecies ()
 {
