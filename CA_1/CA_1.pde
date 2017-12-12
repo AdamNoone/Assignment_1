@@ -188,6 +188,9 @@ void mousePressed()
       ship1.Color3 = 0;
       ship1.O2Amt = ship1.O2Amt + 80; 
       ship1.fuelAmt = ship1.fuelAmt + 80;
+      radar.speed = radar.speed *7;
+      radar.c = radar.c -200;
+      RadarWarp ();
       
  
     
@@ -209,6 +212,10 @@ void mousePressed()
     ship1.Color1 = 100;
     ship1.Color2 = 120;
     ship1.Color3 = 120;
+     radar.speed = radar.speed /7;
+     radar.c = radar.c +200;
+     RadarWarp ();
+    
      
      
      

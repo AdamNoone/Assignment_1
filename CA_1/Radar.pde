@@ -32,7 +32,7 @@ class Radar
 
     this.theta = 0;
 
-    this.c = c;
+    this.c = 255;
 
   }
 
@@ -52,7 +52,7 @@ class Radar
 
   {
 
-    stroke(0, 255, 0);
+    stroke(0, c, 0);
 
     
     fill (20);
