@@ -110,7 +110,7 @@ void draw ()
   
   }
   
-  if (invisible ==1)
+  if ((invisible ==1) && (thirdPerson ==0))
   {
     background(0);
        image(space,0,0);
@@ -129,7 +129,7 @@ void draw ()
   }
   
   
-   if (thirdPerson ==1)
+   if ((invisible ==0) && (thirdPerson ==1))
   {
     background(0);
        image(space,0,0);
@@ -145,6 +145,23 @@ void draw ()
     planets[i].show();
   }
      ship2.DrawExterior();
+  }
+  
+  if ((invisible ==1) && (thirdPerson ==1))
+  {
+      background(0);
+       image(space,0,0);
+  
+  translate(translateX, translateY);
+  speed = map(speedX, 0, width, 0, 50);
+  for (int i = 0; i < stars.length; i++) {
+    stars[i].update();
+    stars[i].show();
+  }
+    for (int i = 0; i < planets.length; i++) {
+    planets[i].update();
+    planets[i].show();
+  }
   }
 }
 
@@ -351,6 +368,31 @@ void mousePressed()
  
 
  void keyPressed() {
+   
+   if (key == 't') {
+   
+          w += 1;
+      
+  
+  if ( w % 2 == 0)
+  {
+  
+    thirdPerson = thirdPerson +1;
+    file7 = new SoundFile(this, "button.mp3");
+    file7.play();
+      
+  }
+  
+ else if ( w % 2 == 1)
+ {
+  thirdPerson = thirdPerson -1;
+  
+    file7.play();
+ }
+   
+  
+     
+   }
      if (key == 'i') {
    
      f += 1;
@@ -406,7 +448,7 @@ void mousePressed()
   }
  }
  
-  
+
  
  void displaySpecies ()
 {
