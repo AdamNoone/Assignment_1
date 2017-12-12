@@ -24,7 +24,7 @@ int w = 1;
 int invisible =0;
 int thirdPerson = 0;
 
-float speedX = 5;
+float speedX = 15;
 float translateX =  350;
 float translateY =  250;
 
@@ -239,7 +239,7 @@ void mousePressed()
        file3.stop();
      }
    // Load a soundfile from the /data folder of the sketch and play it back
-  file2 = new SoundFile(this, "Music.mp3");
+  file2 = new SoundFile(this, "Buttons.mp3");
   
   
   file2.play();
