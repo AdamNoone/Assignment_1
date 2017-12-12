@@ -114,6 +114,7 @@ void draw ()
   {
     background(0);
        image(space,0,0);
+       
   
   translate(translateX, translateY);
   speed = map(speedX, 0, width, 0, 50);
@@ -493,5 +494,20 @@ void mousePressed()
   
 
 }
+  
+}
+
+ void RadarWarp ()
+{
+  fill(255,255,225);
+  
+   for(Species species:speciess)
+  {
+   float x = species.screenPosX;
+      
+  species.screenPosY= species.screenPosY +20;
+  
+
+  }
   
 }
