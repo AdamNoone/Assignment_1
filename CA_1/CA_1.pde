@@ -242,32 +242,32 @@ void mousePressed()
       
       
       
-      //buttonnoises
+      //Button Noises
       
       if (dist(mouseX, mouseY,212, 382) < 25)
       {
-  j = j +1;
+       j = j +1; //used to see if bottons have been pressed before 
   
-  if ( j % 2 == 0)
-  {
+        if ( j % 2 == 0)//if they are pressed
+        {
   
-       b = b +1;
-     
-     if (a == 1)
-     {
-       file3.stop();
-     }
-   // Load a soundfile from the /data folder of the sketch and play it back
-  file2 = new SoundFile(this, "Buttons.mp3");
-  
-  
-  file2.play();
+           b = b +1;//counter used to two adio file not played at same time 
+         
+         if (a == 1)//if another file is playing ,turn it off 
+         {
+           file3.stop();
+         }
+       // Load a soundfile from the /data folder of the sketch and play it back
+      file2 = new SoundFile(this, "Buttons.mp3");
+      
+      
+      file2.play();
       
   }
   
- else if ( j % 2 == 1)
+ else if ( j % 2 == 1)//if buttins have alredy been pressed ,then next time we press the we are turning them off
  {
-   b = b -1;
+   b = b -1;//counter used to two audio file not played at same time 
   file2.stop();
   
  }
@@ -278,36 +278,36 @@ void mousePressed()
       
       
       
-      //radio
-      println(mouseX, mouseY);
+      //Play the radio (buttons on the left)
+      
             if (dist(mouseX, mouseY,157,381) < 25)
       {
-  m = m +1;
-  
-  if ( m % 2 == 0)
-  {
-  
-     a = a +1;
-     
-     if (b == 1)
-     {
-       file2.stop();
-     }
-   // Load a soundfile from the /data folder of the sketch and play it back
-  file3 = new SoundFile(this, "radio.mp3");
-  
-  
-  file3.play();
-      
-  }
-  
- else if ( m % 2 == 1)
- {
-   a = a -1;
-  file3.stop();
-  
- }
- 
+            m = m +1;//used to see if bottons have been pressed before 
+            
+            if ( m % 2 == 0)//if pressed once 
+            {
+            
+               a = a +1;//counter used to two audio file not played at same time 
+               
+               if (b == 1)//if pressed again
+               {
+                 file2.stop();
+               }
+             // Load a soundfile from the /data folder of the sketch and play it back
+            file3 = new SoundFile(this, "radio.mp3");
+            
+            
+            file3.play();
+                
+            }
+            
+           else if ( m % 2 == 1)//used to see if bottons have been pressed before 
+           {
+             a = a -1;//counter used to two audio file not played at same time 
+            file3.stop();
+            
+           }
+           
  
       
       }
@@ -315,7 +315,7 @@ void mousePressed()
       
       
      
-       
+       //Contact Radio Tower
             if (dist(mouseX, mouseY,475,384) < 25)
       {
 
@@ -323,13 +323,13 @@ void mousePressed()
   file4 = new SoundFile(this, "transmission.mp3");
   
   
-  file4.play();
+  file4.play();//play transmission audio
       
   }
   
 
- 
-             if (dist(mouseX, mouseY,243,10) < 28)
+     //Invisible button
+      if (dist(mouseX, mouseY,243,10) < 28)
       {
 
            
@@ -337,24 +337,26 @@ void mousePressed()
      f += 1;
       
   
-  if ( f % 2 == 0)
+  if ( f % 2 == 0)//seee if button pressed before
   {
   
-    invisible = invisible +1;
+    invisible = invisible +1;//incrment invisible
     file7 = new SoundFile(this, "button.mp3");
-    file7.play();
+    file7.play();//play button  being pressed audio
       
   }
   
- else if ( f % 2 == 1)
+ else if ( f % 2 == 1)//if button pressed again
  {
-  invisible = invisible -1;
-  file7.play();
+  invisible = invisible -1;//decrment invisible
+  file7.play();//play button  being pressed audio
  }
    
   }
   
-                  if (dist(mouseX, mouseY,430,10) < 28)
+      
+  //3rd person Button 
+       if (dist(mouseX, mouseY,430,10) < 28)
       {
 
            
@@ -362,20 +364,20 @@ void mousePressed()
      w += 1;
       
   
-  if ( w % 2 == 0)
+  if ( w % 2 == 0)//seee if button pressed before
   {
   
-    thirdPerson = thirdPerson +1;
+    thirdPerson = thirdPerson +1;//incrment thirdPerson
     file7 = new SoundFile(this, "button.mp3");
-    file7.play();
+    file7.play();//play button  being pressed audio
       
   }
   
- else if ( w % 2 == 1)
+ else if ( w % 2 == 1)//seee if button pressed again
  {
-  thirdPerson = thirdPerson -1;
+  thirdPerson = thirdPerson -1;//decrment thirdPerson
   
-    file7.play();
+    file7.play();//play button  being pressed audio
  }
    
   }
@@ -388,7 +390,7 @@ void mousePressed()
 
  void keyPressed() {
    
-   if (key == 't') {
+   if (key == 't') {//if t was pressed then toggle 3rd person mode
    
           w += 1;
       
@@ -412,7 +414,7 @@ void mousePressed()
   
      
    }
-     if (key == 'i') {
+     if (key == 'i') {//if i was pressed then toggle invisable mode
    
      f += 1;
      
@@ -433,7 +435,7 @@ void mousePressed()
      
   }
    
-    if (key == 'w') {
+    if (key == 'w') { //if w was pressed
    
      speedX = speedX +5;
      if (speedX > 100)
@@ -445,7 +447,7 @@ void mousePressed()
        ship1.O2Amt = ship1.O2Amt + 0.1;
      
   }
-     if (key == 's') {
+     if (key == 's') { //if s was pressed
    
      speedX = speedX -10;
      if (speedX < 5)
@@ -456,12 +458,12 @@ void mousePressed()
   }
     
      
-  if (key == 'a') {
+  if (key == 'a') { //if a was pressed
    
      translateX = translateX + 20;
      
   }
-  if (key == 'd') {
+  if (key == 'd') { //if d was pressed
    
        translateX = translateX -  20;
      
