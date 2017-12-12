@@ -1,20 +1,21 @@
 
 
-
+//create InsideShip class
 class InsideShip
 {
   
- void moveThrottle()
+  
+ void moveThrottle()//create moveThrottle()function to draw the throttle
 {
  fill(30);
-rect(510,350 ,30,70);
+rect(510,350 ,30,70); //draw a rect
 
 fill(90);
-rect(520,370 ,10,55);
+rect(520,370 ,10,55);//draw a rect
 
 fill(255,0,0);
 stroke(0);
-ellipse(525,430,30,30);
+ellipse(525,430,30,30);//draw circle
 
 
 }
@@ -52,7 +53,7 @@ ellipse(525,430,30,30);
   
   noStroke();
   fill(70);
-  ellipse(340, 230, 200, 80);
+  ellipse(340, 230, 200, 80);//draw circle
   noStroke();
   fill(70);
 beginShape();// begin draw dashboard
@@ -124,20 +125,20 @@ buttons ();
 
 
 fill(30);
-rect(510,350 ,30,70);
+rect(510,350 ,30,70);//draw a rect
 
 fill(90);
-rect(ThrottleX,ThrottleY ,10,55);
+rect(ThrottleX,ThrottleY ,10,55);//draw a rect
 
 fill(255,0,0);
 stroke(0);
-ellipse(CircleX,CircleY,30,30);
+ellipse(CircleX,CircleY,30,30);//draw circle
 
 //make fuel and oxygen gauge 
 
 fill(90);
-rect(GaugeX,GaugeY,25,80);
-rect(GaugeX ,GaugeY + 80,25,15);
+rect(GaugeX,GaugeY,25,80);//draw a rect
+rect(GaugeX ,GaugeY + 80,25,15);//draw a rect
 
 fill(255,255,225);
   textSize(10);
@@ -153,8 +154,8 @@ fill(255,255,225);
   
 
 fill(90);
-rect(GaugeX + 40,GaugeY,25,80);
-rect(GaugeX +40 ,GaugeY + 80,25,15);
+rect(GaugeX + 40,GaugeY,25,80);//draw a rect
+rect(GaugeX +40 ,GaugeY + 80,25,15);//draw a rect
 fill(255,255,225);
 textSize(10);
 text("O2",GaugeX +42 ,GaugeY +92);
@@ -162,7 +163,7 @@ text("O2",GaugeX +42 ,GaugeY +92);
   
   //amount in fuel and O2 tanks 
   fill(244,0,0);
-rect(fuelX,fuelY,23,fuelAmt);
+rect(fuelX,fuelY,23,fuelAmt);//draw a rect
 
       if ( O2Amt < -55)
      {
@@ -197,7 +198,7 @@ rect(fuelX,fuelY,23,fuelAmt);
       
 
 fill(col1,col2,col3);
-rect(fuelX2 ,fuelY2 ,23,O2Amt);
+rect(fuelX2 ,fuelY2 ,23,O2Amt);//draw a rect
 
  if (fuelAmt > -5)
      {
@@ -225,7 +226,7 @@ text("1000---",numbersX -5 ,numbersY-64);
 //Go invivsable button 
 stroke(255,0,0);
 fill(70);
-rect(InvisButX,InvisButY ,90,15);
+rect(InvisButX,InvisButY ,90,15);//draw a rect
 
   fill(255);
   textSize(10);
@@ -234,7 +235,7 @@ rect(InvisButX,InvisButY ,90,15);
   
   //3rd person Button 
   fill(70);
-  rect(InvisButX+170,InvisButY ,90,15);
+  rect(InvisButX+170,InvisButY ,90,15);//draw a rect
 
   fill(255);
   textSize(10);
@@ -255,9 +256,9 @@ fill(255,255,225);
   
   fill (0);
   stroke(150);
-rect( ScreenX,ScreenY,120,100);
+rect( ScreenX,ScreenY,120,100);//draw a rect
 
-rect( 290,198,100,101);
+rect( 290,198,100,101);//draw a rect
 
 fill(0,255,0);
 textSize(10);
@@ -309,7 +310,7 @@ for (int y = 360 ; y < 400 ; y +=13)
   else 
   {
    fill (random(0,225),random(0,225),random(0,225));
-  rect (x,y,7,7);
+  rect (x,y,7,7);//draw a rect
  }
 //}
 }
@@ -326,7 +327,7 @@ for (int y = 360 ; y < 400 ; y +=13)
   {
     
   fill (0,255,0);
-   rect (x,y,7,7);
+   rect (x,y,7,7);//draw a rect
    
   }
   else 
