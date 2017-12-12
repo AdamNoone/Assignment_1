@@ -5,7 +5,7 @@ class InsideShip
 {
   
   
- void moveThrottle()//create moveThrottle()function to draw the throttle
+ void moveThrottle()//create moveThrottle()function to animate throttle when clicked.
 {
  fill(30);
 rect(510,350 ,30,70); //draw a rect
@@ -19,32 +19,31 @@ ellipse(525,430,30,30);//draw circle
 
 
 }
-  float ThrottleX =520;
-  float ThrottleY =340;
-  float CircleX  = 525;
-  float CircleY =  340;
-  float GaugeX = 40;
-  float GaugeY = 375;
-  float Color1 = 100;
-  float Color2 = 102;
-  float Color3 = 102;
-  float ScreenX = 280;
-  float ScreenY = 325;
-  int warncol = 100;
-  float numbersX = 23  ;
-  float numbersY = 457  ;
-  float col1 = 0;
-  float col2 = 255;
-  float col3 = 0;
-  float InvisButX = 203;
-  float InvisButY = 9;
+  float ThrottleX =520;// X variable used when drawing Throttle
+  float ThrottleY =340; // Y variable used when drawing Throttle
+  float CircleX  = 525; // X variable used when drawing Throttle gearstick
+  float CircleY =  340; // Y variable used when drawing Throttle gearstick
+  float GaugeX = 40;  //X variable used when drawing fuel and oxygen gauges
+  float GaugeY = 375; //Y variable used when drawing fuel and oxygen gauges
+  float Color1 = 100; //used to chande colour of warning button during warp
+  float Color2 = 102; //used to chande colour of warning button during warp
+  float Color3 = 102; //used to chande colour of warning button during warp
+  float ScreenX = 280; // X variable used when drawing scree to diplay planet Information
+  float ScreenY = 325; // Y variable used when drawing scree to diplay planet Information
+  float numbersX = 23  ; //X variable used to draw numbers on fuel gauge
+  float numbersY = 457  ; //Y variable used to draw numbers on fuel gauge
+  float col1 = 0; //varible used to change O2 colour based on amount left
+  float col2 = 255;//varible used to change O2 colour based on amount left
+  float col3 = 0;//varible used to change O2 colour based on amount left
+  float InvisButX = 203;// X variable used when drawing invisiible Cloak and 3rd person buttons
+  float InvisButY = 9;// Y variable used when drawing invisiible Cloak and 3rd person buttons
   
-   float fuelX = 41;
-  float fuelY = 454;
-   float fuelX2 = 81;
-  float fuelY2 = 455;
-  float  O2Amt = -80;
-  float  fuelAmt = -50;
+  float fuelX = 41;// X variable used when drawing fuel
+  float fuelY = 454;// Y variable used when drawing fuel
+  float fuelX2 = 81; // X variable used when drawing Oxygen
+  float fuelY2 = 455; // Y variable used when drawing Oxygen
+  float  O2Amt = -80; //variable to dictate how much Oxygen the ship has 
+  float  fuelAmt = -50; //variable to dictate how much fuel the ship has 
   
     void display()
 {
