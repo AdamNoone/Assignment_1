@@ -45,16 +45,17 @@ ellipse(525,430,30,30);//draw circle
   float  O2Amt = -80; //variable to dictate how much Oxygen the ship has 
   float  fuelAmt = -50; //variable to dictate how much fuel the ship has 
   
-    void display()
+    void display()//fuction that will draw inside of ship
 {
 
+  //DRAW THE GREY DASHBOARD
   fill(90);
-  
   noStroke();
   fill(70);
   ellipse(340, 230, 200, 80);//draw circle
   noStroke();
   fill(70);
+  
 beginShape();// begin draw dashboard
 vertex(0,height);
 vertex(-50,430);
@@ -72,8 +73,10 @@ vertex(width,height);
 // etc;
 endShape();//end draw dashboard
 
+
+
 stroke(0,255,0);
-beginShape();// begin draw top
+beginShape();// begin draw top (where buttons are)
 vertex(width,0);
 vertex(width,65);
 vertex(600,30);
@@ -81,7 +84,11 @@ vertex(100,30);
 vertex(0,65);
 vertex(0,0);
 endShape();//end draw top
+
+
  noStroke();
+ 
+ 
 beginShape();// begin draw side1
 vertex(width,65);
 vertex(695,60);
@@ -96,9 +103,10 @@ vertex(5,60);
 vertex(5,395);
 vertex(0,400);
 
-
-
 endShape();//end draw side2
+
+
+//draw window frames
 stroke(70);
 line(100,30,100,330);
 line(600,30,600,330);
@@ -120,9 +128,10 @@ stroke(0,255,0);
 line (100,330,150,450);
 line (600,330,550,450);
 
-buttons ();
+buttons ();//call the button() fuction to draw green buttons on ship
 
 
+//Draw the throttle
 fill(30);
 rect(510,350 ,30,70);//draw a rect
 
@@ -133,7 +142,9 @@ fill(255,0,0);
 stroke(0);
 ellipse(CircleX,CircleY,30,30);//draw circle
 
-//make fuel and oxygen gauge 
+
+
+//Draw fuel and oxygen gauge 
 
 fill(90);
 rect(GaugeX,GaugeY,25,80);//draw a rect
@@ -144,13 +155,7 @@ fill(255,255,225);
   text("Fuel",GaugeX +2 ,GaugeY +92);
   
   
-  
-  
-    
-    
-    
-  
-  
+
 
 fill(90);
 rect(GaugeX + 40,GaugeY,25,80);//draw a rect
@@ -160,7 +165,9 @@ textSize(10);
 text("O2",GaugeX +42 ,GaugeY +92);
   
   
-  //amount in fuel and O2 tanks 
+  
+  
+  // draw amount in fuel and O2 tanks 
   fill(244,0,0);
 rect(fuelX,fuelY,23,fuelAmt);//draw a rect
 
@@ -209,6 +216,8 @@ rect(fuelX2 ,fuelY2 ,23,O2Amt);//draw a rect
        fuelAmt = -77;
      }
    
+   
+   //draw numbers on fuel gauge
 fill(255);
 textSize(8);
 text("0-----",numbersX ,numbersY);
@@ -252,6 +261,9 @@ rect(585,GaugeY +15,90,25);
 fill(255,255,225);
   textSize(15);
   text("Warning",600 ,GaugeY +35);
+  
+  
+  //Draw scren that displays planet info
   
   fill (0);
   stroke(150);
