@@ -52,3 +52,6 @@ the look of the sketch.In also enables me to show off what ive created.In Invisa
 they can see the ship ive creted.
 
 [![MY YOUTUBE VIDEO](http://img.youtube.com/vi/vecMCz1eB1s&feature=youtu.be/0.jpg)](http://www.youtube.com/watch?v=vecMCz1eB1s&feature=youtu.be)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=vecMCz1eB1s&feature=youtu.be
+" target="_blank"><img src="http://img.youtube.com/vi/vecMCz1eB1s&feature=youtu.be/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
